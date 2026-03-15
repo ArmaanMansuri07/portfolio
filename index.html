@@ -1,268 +1,606 @@
-<!DOCTYPE html>
-<html lang="en">
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armaan | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
 
-<body>
+ html {
+     scroll-behavior: smooth;
+ }
 
-    <header>
+ body {
+     background: #0f0f0f;
+     color: #ffffff;
+     line-height: 1.6;
+ }
 
-        <div class="logo">
-            <div class="small">
-                <img src="armaan.jpg" alt="Profile">
-            </div>
-            <h1>Armaan Mansuri</h1>
-        </div>
+ a {
+     color: inherit;
+     text-decoration: none;
+ }
 
-        <div class="hamburger">
-            ☰
-        </div>
+ header {
+     border: 2px solid #1f1f1f;
+     position: sticky;
+     top: 0;
+     background: #1f1f1f;
+     padding: 25px 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 100;
+ }
 
-        <nav>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+ .logo {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+ }
 
-    </header>
+ header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
 
-    <section class="hero" id="hero">
-        <div class="back"><img src="program.jpg" alt=""></div>
-        <h2>Hey, I'm Armaan...</h2>
-        <p>Frontend Developer | Programmer | Tech Enthusiast</p>
-        <a href="resume.pdf" download class="btn">Download CV</a>
-    </section>
+ header h1 {
+     font-size: 24px;
+     color: #00ffcc;
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about">
-            <img src="armaan.jpg" alt="Profile">
-            <p>Hello! My name is Armaan Mansuri, and I am a passionate web developer who loves turning ideas into
-                reality
-                through clean and responsive designs.
-                I specialize in building modern websites using HTML, CSS, and JavaScript, and I am continuously learning
-                new technologies like Python and C to expand my skill set.
+     padding-bottom: 12px;
+ }
 
-            <p>I enjoy solving problems, creating user-friendly designs, and exploring innovative solutions to make web
-                applications faster and more efficient.
-                Currently, I am focusing on improving my frontend development skills while also gaining experience in
-                backend technologies.</p>
+ nav ul {
+     list-style: none;
+     display: flex;
+     gap: 20px;
+ }
 
-            Apart from coding, I am interested in Playing Outdoor games.
-            My goal is to become a full-stack developer and contribute to impactful projects that can make a real
-            difference.
-            </p>
-        </div>
-    </section>
+ nav ul li a {
+     font-weight: 500;
+     transition: 0.3s;
+ }
 
+ nav ul li a:hover {
+     color: #00ffcc;
+ }
 
-    <section id="profiles">
+ .hero {
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 0 20px;
+ }
 
-        <h2>Professional Profiles</h2>
+ .hero h2 {
+     color: white;
+     font-size: 70px;
+     margin-bottom: 10px;
+     opacity: 0;
+     transform: translateX(-100px);
+     animation: slideIn 1s ease-out forwards;
 
-        <div class="profiles">
+ }
 
-            <div class="profile-card">
-                <h3>LinkedIn</h3>
-                <p>Connect with me professionally and explore my career journey.</p>
-                <a href="https://linkedin.com/in/armaan-mansuri07" target="_blank" class="profile-btn">Visit
-                    LinkedIn</a>
-            </div>
-
-            <div class="profile-card">
-                <h3>GitHub</h3>
-                <p>Check out my coding projects and open-source work.</p>
-                <a href="https://github.com/ArmaanMansuri07" target="_blank" class="profile-btn">Visit GitHub</a>
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
+ @keyframes slideIn {
+     to {
+         opacity: 1;
+         transform: translateX(0);
+     }
+ }
 
 
-            <div class="project">
-                <img src="supercars.jpg" alt="Project">
-                <div class="content">
-                    <h3>Supercars Arena</h3>
-                    <p>A Django website showcasing luxury and supercars with details and showrooms in India.</p>
+ .hero p {
+     font-size: 22px;
+     color: #00ffcc;
+     margin-bottom: 20px;
 
-                    <a href="https://armaanmansuri07.pythonanywhere.com/" target="_blank" class="demo-btn">Live Demo</a>
-                </div>
-            </div>
-            <div class="project">
-                <img src="netflix.jpg" alt="Project 1">
-                <div class="content">
-                    <h3>Netflix Clone</h3>
-                    <p>A clone of Netflix homepage using HTML & CSS.</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="SStravel.jpg" alt="Project 2">
-                <div class="content">
-                    <h3>Travel the World</h3>
-                    <p>Developed an informative website of travel and showcasing the destinations, hotels & activities
-                        using HTML, CSS & JavaScript</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="SSclubs.jpg" alt="Project 2">
-                <div class="content">
-                    <h3>Clubs Website</h3>
-                    <p>Responsive website of top clubs of Noida with HTML, CSS.</p>
-                    <a href="https://armaanmansuri07.github.io/clubs/" target="_blank" class="demo-btn">Live Demo</a>
-                </div>
-            </div>
-            <div class="project">
-                <img src="SSspotify.jpg" alt="Project 1">
-                <div class="content">
-                    <h3>Spotify Clone</h3>
-                    <p>A clone of Spotify homepage using HTML, CSS & JavaScript.</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="SSsnake.jpg" alt="Project 1">
-                <div class="content">
-                    <h3>Snake Game</h3>
-                    <p>Developed a Python based version of the classic game.</p>
-                </div>
-            </div>
-            <div class="project">
-                <img src="SSweather.jpg" alt="Project 1">
-                <div class="content">
-                    <h3>Weather Forecast Web</h3>
-                    <p>Developed a fully functional weather forecast web using HTML, CSS & JavaScript.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ }
+
+ .btn {
+     display: inline-block;
+     padding: 10px 20px;
+     background: rgb(244, 144, 244);
+     color: #111;
+     border-radius: 7px;
+     font-weight: bold;
+     transition: 0.3s;
+     margin: 5px;
+     font-size: 15px;
+
+ }
+
+ .btn:hover {
+     background: rgb(254, 27, 254);
+ }
+
+ section {
+     padding: 80px 50px;
+     max-width: 1100px;
+     margin: auto;
+ }
+
+ section h2 {
+     text-align: center;
+     font-size: 32px;
+     margin-bottom: 40px;
+     color: #00ffcc;
+ }
 
 
+ .about {
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     gap: 30px;
+     justify-content: center;
+     text-align: center;
+ }
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills">
-            <div class="skill">🌐 HTML</div>
-            <div class="skill">🎨 CSS</div>
-            <div class="skill">⚡ JavaScript</div>
-            <div class="skill">🐍 Python</div>
-            <div class="skill">💻 C</div>
-            <div class="skill">🧩 Django</div>
-        </div>
-    </section>
-
-
-    <section id="college">
-        <h2>Education</h2>
-        <div class="college">
-            <div class="education">
-                <img src="college.jpg" alt="Project 1">
-                <div class="content">
-                    <h3>Bachelor of Computer Applications (BCA)</h3>
-                    <p>IIMT University, Greater Noida</p>
-                    <p>Batch: 2023-2026</p>
-                </div>
-            </div>
-            <div class="education">
-                <img src="school.jpg" alt="Project 2">
-                <div class="content">
-                    <h3>Senior Secondary (Class 12, Science - PCM)</h3>
-                    <p>Vanasthali Public School, Delhi</p>
-                    <p>2021-2023</p>
-                </div>
-            </div>
-
-    </section>
-
-    <section id="certificates">
-
-        <h2>Certificates & Achievements</h2>
-
-        <div class="certificates">
-
-            <div class="certificate-card">
-                <h3>Python Certification</h3>
-                <p>Appz Global Tech Pvt. Ltd., Noida</p>
-                <span>2023 - 2024</span>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Data Analytics Job Simulation</h3>
-                <p>Deloitte</p>
-                <span>2025</span>
-            </div>
-
-            <div class="certificate-card">
-                <h3>Techathon</h3>
-                <p>Frontend Web Development Competition</p>
-                <span>Achievement</span>
-            </div>
-
-        </div>
-
-    </section>
+ .about img {
+     width: 180px;
+     height: 180px;
+     border-radius: 50%;
+     border: 4px solid #00ffcc;
+ }
 
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
+ .skills {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     gap: 20px;
+     text-align: center;
+ }
+
+ .skill {
+     background: #1a1a1a;
+     padding: 20px;
+     border-radius: 10px;
+     transition: 0.3s;
+ }
+
+ .skill:hover {
+     transform: translateY(-5px);
+     background: #222;
+ }
 
 
-    <footer>
+ .projects {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+ }
 
-        <div class="footer-container">
+ .project {
+     background: #1a1a1a;
+     border-radius: 10px;
+     overflow: hidden;
+     transition: 0.3s;
+ }
 
-            <p>© 2026 Armaan Mansuri | All Rights Reserved</p>
+ .project img {
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+ }
 
-            <div class="footer-links">
-                <a href="https://github.com/ArmaanMansuri07" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/armaan-mansuri07" target="_blank">LinkedIn</a>
-                <a href="mailto:armaanmansuri0707@gmail.com">Email</a>
-            </div>
+ .project .content {
+     padding: 15px;
+ }
 
-        </div>
+ .project:hover {
+     transform: scale(1.03);
+ }
 
-    </footer>
+ #contact h2 {
+     color: #00ffcc;
+ }
+
+ .contact form {
+     max-width: 500px;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+ }
+
+ .contact input,
+ .contact textarea {
+     padding: 12px;
+     border: none;
+     border-radius: 5px;
+     outline: none;
+ }
+
+ .contact button {
+     padding: 12px;
+     border: none;
+     border-radius: 5px;
+     background: #dbdf85;
+     color: #111;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+ .contact button:hover {
+     background: #b3eaab;
+ }
+
+ footer {
+     background: #1f1f1f;
+     border-top: 2px solid #2a2a2a;
+     padding: 40px 50px;
+     margin-top: 50px;
+ }
+
+ .footer-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 20px;
+ }
+
+ .footer-container p {
+     color: #ccc;
+     font-size: 15px;
+ }
+
+ .footer-links {
+     display: flex;
+     gap: 25px;
+ }
+
+ .footer-links a {
+     color: #ccc;
+     font-weight: 500;
+     transition: 0.3s;
+ }
+
+ .footer-links a:hover {
+     color: #00ffcc;
+ }
+
+ .back img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: -1;
+ }
+
+ .back img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: -1;
+ }
+
+ .small img {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+ }
+
+ .education {
+     background: #1a1a1a;
+     border-radius: 50px;
+     overflow: hidden;
+     transition: 0.3s;
+ }
+
+ .education img {
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+ }
+
+ .education .content {
+     padding: 15px;
+ }
+
+ .education:hover {
+     transform: scale(1.03);
+ }
+
+ .college {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+ }
+
+ .project,
+ .content h3 {
+     color: #ff6347;
+ }
+
+ .project,
+ .content p {
+     color: white;
+ }
+
+ .certificates {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 20px;
+ }
+
+ .certificate-card {
+     background: #1a1a1a;
+     padding: 25px;
+     border-radius: 12px;
+     text-align: center;
+     transition: 0.3s;
+     border: 1px solid #2a2a2a;
+ }
+
+ .certificate-card:hover {
+     transform: translateY(-6px);
+     border-color: #00ffcc;
+ }
+
+ .certificate-card h3 {
+     color: #ff6347;
+     margin-bottom: 10px;
+ }
+
+ .certificate-card p {
+     color: #ccc;
+     margin-bottom: 8px;
+ }
+
+ .certificate-card span {
+     font-size: 14px;
+     color: #00ffcc;
+ }
 
 
 
 
 
-    <script>
 
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector("nav ul");
 
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
 
-    </script>
-</body>
+ /* ---------- Tablet Responsive ---------- */
 
-</html>
+ @media (max-width: 1024px) {
+
+     header {
+         flex-direction: column;
+         gap: 15px;
+         padding: 20px;
+     }
+
+     header h1 {
+         margin-right: 0;
+         padding-bottom: 0;
+         text-align: center;
+     }
+
+     nav ul {
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+
+     .hero h2 {
+         font-size: 50px;
+         margin-right: 0;
+     }
+
+     .hero p {
+         margin-right: 0;
+     }
+
+     .btn {
+         margin-right: 0;
+     }
+
+ }
+
+
+ /* ---------- Mobile Responsive ---------- */
+
+ @media (max-width: 768px) {
+
+     header {
+         flex-direction: column;
+         text-align: center;
+     }
+
+     nav ul {
+         flex-direction: column;
+         gap: 10px;
+     }
+
+     .hero {
+         height: auto;
+         padding: 120px 20px;
+     }
+
+     .hero h2 {
+         font-size: 38px;
+     }
+
+     .hero p {
+         font-size: 18px;
+     }
+
+     section {
+         padding: 60px 20px;
+     }
+
+     .about {
+         flex-direction: column;
+         text-align: center;
+     }
+
+     .projects {
+         grid-template-columns: 1fr;
+     }
+
+     .skills {
+         grid-template-columns: repeat(2, 1fr);
+     }
+
+     .college {
+         grid-template-columns: 1fr;
+     }
+
+ }
+
+
+ /* ---------- Small Mobile ---------- */
+
+ @media (max-width: 480px) {
+
+     .hero h2 {
+         font-size: 30px;
+     }
+
+     .hero p {
+         font-size: 16px;
+     }
+
+     .skills {
+         grid-template-columns: 1fr;
+     }
+
+ }
+
+
+
+
+
+
+ .hamburger {
+     display: none;
+     flex-direction: column;
+     cursor: pointer;
+     gap: 5px;
+ }
+
+ .hamburger span {
+     width: 25px;
+     height: 3px;
+     background: white;
+ }
+
+
+
+ .demo-btn {
+     display: inline-block;
+     margin-top: 10px;
+     padding: 8px 15px;
+     background: #abe4d1;
+     color: #111;
+     border-radius: 6px;
+     font-size: 14px;
+     font-weight: 500;
+     transition: 0.3s;
+ }
+
+ .demo-btn:hover {
+     background: #00cca3;
+     transform: scale(1.05);
+ }
+
+
+
+
+
+
+
+
+ .profiles {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 25px;
+     text-align: center;
+ }
+
+ .profile-card {
+     background: #1a1a1a;
+     padding: 30px;
+     border-radius: 12px;
+     transition: 0.3s;
+ }
+
+ .profile-card:hover {
+     transform: translateY(-6px);
+     background: #222;
+ }
+
+ .profile-card h3 {
+     color: #7C5CFF;
+     margin-bottom: 10px;
+ }
+
+ .profile-card p {
+     margin-bottom: 15px;
+     color: #ccc;
+ }
+
+ .profile-btn {
+     display: inline-block;
+     padding: 10px 18px;
+     background: #eb9090;
+     color: #111;
+     border-radius: 6px;
+     font-weight: 500;
+     transition: 0.3s;
+ }
+
+ .profile-btn:hover {
+     background: #00cca3;
+ }
+
+
+ /* Hamburger */
+
+ .hamburger {
+     display: none;
+     font-size: 28px;
+     cursor: pointer;
+     color: white;
+ }
+
+ /* Mobile Menu */
+
+ @media (max-width:768px) {
+
+     header {
+         flex-direction: row;
+         justify-content: space-between;
+     }
+
+     .hamburger {
+         display: block;
+     }
+
+     nav ul {
+         display: none;
+         flex-direction: column;
+         position: absolute;
+         top: 80px;
+         left: 0;
+         width: 100%;
+         background: #1f1f1f;
+         padding: 20px 0;
+     }
+
+     nav ul.active {
+         display: flex;
+     }
+
+ }
